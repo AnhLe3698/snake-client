@@ -14,6 +14,17 @@ const connect = function() {
     // code that does something when the connection is first established
     console.log("Successfully Connected!");
     conn.write("Name: AVL");
+    /*
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 100);
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 600);
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, 900);
+    */
   });
   
   conn.on("data", (data) => {
