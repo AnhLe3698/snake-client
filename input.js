@@ -1,4 +1,5 @@
 let connection;
+const kb  = require("./constants");
 
 const setupInput = function(conn) {
   const stdin = process.stdin;
@@ -19,16 +20,16 @@ const handleUserInput = function(key) {
   if (key === 'e') {
     connection.write("Say: nice!");
   }
-  if (key === 'w') {
+  if (key === kb.keyBindings[0]) {
     connection.write("Move: up");
   }
-  if (key === 'a') {
+  if (key === kb.keyBindings[1]) {
     connection.write("Move: left");
   }
-  if (key === 's') {
+  if (key === kb.keyBindings[2]) {
     connection.write("Move: down");
   }
-  if (key === 'd') {
+  if (key === kb.keyBindings[3]) {
     connection.write("Move: right");
   }
   // Exit key ctr + c
